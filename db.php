@@ -25,9 +25,9 @@ $db = new PDO(
 // try {
 //$stmt = $db->prepare("INSERT INTO forms SET name,email = ?");
 $stmt = $db->prepare("INSERT INTO forms (name, email, massage) VALUES ('login','tel','email'");
-// $stmt->execute([$_POST['login']], );
-// $stmt->execute([$_POST['tel']], );
-// $stmt->execute([$_POST['email']], );
+$stmt->execute([$_POST['login']], );
+$stmt->execute([$_POST['tel']], );
+$stmt->execute([$_POST['email']], );
 
 
 
