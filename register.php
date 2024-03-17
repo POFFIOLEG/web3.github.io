@@ -19,7 +19,7 @@ $checkt = $_POST['checkt'];
 // }
 
 // Сохранение выбранных ЯП в таблице "form_languages"
-foreach ($language as $languages) {
+foreach ($languages as $language) {
     $language = $conn->real_escape_string($languages);
     $sql = "INSERT INTO languages (language_name) VALUES ('$languages')";
     if ($conn->query($sql) === TRUE) {
