@@ -19,9 +19,9 @@ $checkt = $_POST['checkt'];
 // }
 
 // Сохранение выбранных ЯП в таблице "form_languages"
-foreach ($languages as $language) {
-    $language = $conn->real_escape_string($language);
-    $sql = "INSERT INTO languages (language_name) VALUES ('$language')";
+foreach ($languages as $languages) {
+    $language = $conn->real_escape_string($languages);
+    $sql = "INSERT INTO languages (language_name) VALUES ('$languages')";
     if ($conn->query($sql) === TRUE) {
         $language_id = $conn->insert_id; // Получаем ID новой записи
         $sql = "INSERT INTO form_languages (form_id, language_id) VALUES ('$form_id', '$language_id')";
