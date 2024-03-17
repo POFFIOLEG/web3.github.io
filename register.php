@@ -11,12 +11,12 @@ $checkt = $_POST['checkt'];
 
 
 
-// $sql = "INSERT INTO forms (login, tel, email) VALUES ('$login', '$tel', '$email')";
-// if ($conn->query($sql) === TRUE) {
-//     $form_id = $conn->insert_id; // Получаем ID новой записи
-// } else {
-//     echo "Error: " . $sql . "<br>" . $conn->error;
-// }
+$sql = "INSERT INTO forms (login, tel, email) VALUES ('$login', '$tel', '$email')";
+if ($conn->query($sql) === TRUE) {
+    $form_id = $conn->insert_id; // Получаем ID новой записи
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
 
 // Сохранение выбранных ЯП в таблице "form_languages"
 foreach ($languages as $languages) {
@@ -32,6 +32,6 @@ foreach ($languages as $languages) {
 }
 
 // Закрытие соединения с базой данных
-$conn->close();
+
 
 ?>
