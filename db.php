@@ -26,9 +26,9 @@ try {
     // $stmt = $db->prepare("INSERT INTO forms SET name = ?");
     // $stmt->execute([$_POST['login'], $_POST['tel'], $_POST['email']]);
     $stmt = $db->prepare("INSERT INTO forms (name, email, message) VALUES (:login, :email, :tel)");
-    $stmt->bindParam(':login', $login);
-    $stmt->bindParam(':email', $email);
-    $stmt->bindParam(':message', $message);
+    $stmt->bindParam(':name', $login);
+    $stmt->bindParam(':email', $tel);
+    $stmt->bindParam(':message', $email);
 
     $stmt->execute();
 } catch (PDOException $e) {
