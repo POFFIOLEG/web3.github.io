@@ -5,7 +5,7 @@ $tel = $_POST['tel'];
 $email = $_POST['email'];
 $date = $_POST['date'];
 $someGroupName = $_POST['someGroupName'];
-$language = $_POST['language'];
+$languages = $_POST['languages'];
 $bio = $_POST['bio'];
 $checkt = $_POST['checkt'];
 
@@ -20,8 +20,8 @@ $checkt = $_POST['checkt'];
 
 // Сохранение выбранных ЯП в таблице "form_languages"
 foreach ($languages as $language) {
-    $language = $conn->real_escape_string($languages);
-    $sql = "INSERT INTO languages (language_name) VALUES ('$languages')";
+    $language = $conn->real_escape_string($language);
+    $sql = "INSERT INTO languages (language_name) VALUES ('$language')";
     if ($conn->query($sql) === TRUE) {
         $language_id = $conn->insert_id; // Получаем ID новой записи
         $sql = "INSERT INTO form_languages (form_id, language_id) VALUES ('$form_id', '$language_id')";
@@ -32,6 +32,5 @@ foreach ($languages as $language) {
 }
 
 // Закрытие соединения с базой данных
-
-
+$conn->close();
 ?>
