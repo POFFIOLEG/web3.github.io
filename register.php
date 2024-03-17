@@ -1,11 +1,11 @@
 <?php
 require_once ('db.php');
-echo $login = $_POST['login'];
-echo $tel = $_POST['tel'];
-echo $email = $_POST['email'];
-echo $date = $_POST['date'];
-echo $someGroupName = $_POST['someGroupName'];
-echo $languages = $_POST['languages'];
-echo $bio = $_POST['bio'];
-echo $checkt = $_POST['checkt'];
+$login = $_POST['login'];
+$tel = $_POST['tel'];
+$email = $_POST['email'];
+$date = $_POST['date'];
+$someGroupName = $_POST['someGroupName'];
+$languages = $_POST['languages'];
+$bio = $_POST['bio'];
+$checkt = $_POST['checkt'];
 ?>
