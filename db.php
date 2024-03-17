@@ -1,6 +1,6 @@
 <?PHP
 
-$servername = "localhost";
+$servername = "kubu-dev.ru/u67307";
 $username = "u67307";
 $password = "2532509";
 $dbname = "users";
