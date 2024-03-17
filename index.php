@@ -127,8 +127,8 @@
                 <div class="col-auto">
                     <label>
                         Биография:<br />
-                        <textarea name="field-name-2" class="form-control rounded-pill"
-                            placeholder="Напишите свою биографию" required="" name="bio"></textarea>
+                        <textarea class="form-control rounded-pill" placeholder="Напишите свою биографию" required=""
+                            name="bio"></textarea>
                     </label>
                 </div>
 
