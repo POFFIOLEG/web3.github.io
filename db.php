@@ -24,7 +24,7 @@ $db = new PDO(
 //Подготовленный запрос. Не именованные метки.
 // try {
 //$stmt = $db->prepare("INSERT INTO forms SET name,email = ?");
-$stmt = $db->prepare("INSERT INTO forms (name, email, massage) VALUES ('$name','$emadil','$massage'");
+$stmt = $db->prepare("INSERT INTO forms (name, email, massage) VALUES ('$login','$emadil','$massage'");
 // $stmt->execute([$_POST['login']], );
 // $stmt->execute([$_POST['tel']], );
 // $stmt->execute([$_POST['email']], );
