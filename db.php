@@ -6,9 +6,9 @@ $password = "2532509";
 $dbname = "users";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
-if ($conn->connect_error) {
+if (!$conn) {
     die ("Connection Fialed" . mysqli_connect_error());
 } else {
     echo "Good";
 }
-?>
+?>Ы
