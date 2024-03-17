@@ -34,7 +34,7 @@
 
                 <div class="col-auto">
                     <label for="validationCustom01" class="form-label">Фамилия Имя Отчество:</label>
-                    <input type="text" placeholder="login" class="form-control rounded-pill" name="login" value=""
+                    <input type="text" placeholder="ФИО" class="form-control rounded-pill" name="login" value=""
                         required="" />
                     <div class="valid-feedback">Looks good!</div>
                 </div>
@@ -47,7 +47,7 @@
                     <label for="validationCustomUsername" class="form-label">Телефон:
                     </label>
                     <div class="input-group has-validation">
-                        <input type="text" class="form-control rounded-pill" placeholder="Введите ваш номер"
+                        <input type="text" class="form-control rounded-pill" placeholder="Введите ваш номер" name="tel"
                             id="validationCustomUsername" aria-describedby="inputGroupPrepend" required="" />
                         <div class="invalid-feedback"></div>
                     </div>
@@ -62,7 +62,8 @@
                     </label>
                     <div class="input-group has-validation">
                         <input type="text" class="form-control rounded-pill" placeholder="Введите ваш E-mail"
-                            id="validationCustomUsername" aria-describedby="inputGroupPrepend" required="" />
+                            name="e-mail" id="validationCustomUsername" aria-describedby="inputGroupPrepend"
+                            required="" />
                         <div class="invalid-feedback"></div>
                     </div>
                 </div>
@@ -75,7 +76,7 @@
                     <label>
                         Дата рождения:<br />
                         <input name="field-date" class="form-control rounded-pill" placeholder="2004-07-14" type="date"
-                            required="" />
+                            name="date" required="" />
                     </label>
                 </div>
 
@@ -103,7 +104,7 @@
 
                 <div class="col-auto">
                     <label for="validationCustom04" class="form-label">Любимый язык программирования</label>
-                    <select class="form-select rounded-pill" id="validationCustom04" required="" multiple>
+                    <select class="form-select rounded-pill" id="validationCustom04" required="" multiple name="vibor">
                         <option selected="" disabled="" value="">Выберете</option>
                         <option value="Значение1">Pascal</option>
                         <option value="Значение2">C</option>
@@ -127,7 +128,7 @@
                     <label>
                         Биография:<br />
                         <textarea name="field-name-2" class="form-control rounded-pill"
-                            placeholder="Напишите свою биографию" required=""></textarea>
+                            placeholder="Напишите свою биографию" required="" name="bio"></textarea>
                     </label>
                 </div>
 
@@ -138,7 +139,8 @@
                 <div class="col-auto">
                     С контрактом:
                     <div class="form-check icheck-material-orange">
-                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required="" />
+                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required=""
+                            name="check" />
                         <label class="form-check-label" for="invalidCheck">
                             Ознакомлен (а)
                         </label>
