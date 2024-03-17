@@ -24,15 +24,20 @@ $db = new PDO(
 //Подготовленный запрос. Не именованные метки.
 // try {
 //$stmt = $db->prepare("INSERT INTO forms SET name,email = ?");
-$stmt = $db->prepare("INSERT INTO forms (name, email, massage) VALUES ('login','$emadil','$massage'");
+$stmt = $db->prepare("INSERT INTO forms (name, email, massage) VALUES ('login','tel','email'");
 // $stmt->execute([$_POST['login']], );
 // $stmt->execute([$_POST['tel']], );
 // $stmt->execute([$_POST['email']], );
-if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully";
-} else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
-}
+
+
+
+// if ($conn->query($sql) === TRUE) {
+//     echo "New record created successfully";
+// } else {
+//     echo "Error: " . $sql . "<br>" . $conn->error;
+// }
+
+
 // } catch (PDOException $e) {
 //     print ('Error : ' . $e->getMessage());
 //     exit();
