@@ -1,9 +1,9 @@
 <?php
 // Подключение к базе данных
 $servername = "localhost";
-$username = "username";
-$password = "password";
-$dbname = "database";
+$username = "u67307";
+$password = "2532509";
+$dbname = "forms";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
