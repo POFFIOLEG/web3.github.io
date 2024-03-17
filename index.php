@@ -22,15 +22,26 @@
 <body>
     <div class="osnova">
         <div class="wrap1 lh-lg font-monospace">
+
+
+
+
             <form action="register.php" method="POST" id="form" class="row g-3 needs-validation">
                 <h3 id="form" class="text-center">Форма</h3>
 
+
+
+
                 <div class="col-auto">
                     <label for="validationCustom01" class="form-label">Фамилия Имя Отчество:</label>
-                    <input type="text" placeholder="login" class="form-control rounded-pill" id="validationCustom01"
-                        name="login" value="" required="" />
+                    <input type="text" placeholder="login" class="form-control rounded-pill" name="login" value=""
+                        required="" />
                     <div class="valid-feedback">Looks good!</div>
                 </div>
+
+
+
+
 
                 <div class="col-auto">
                     <label for="validationCustomUsername" class="form-label">Телефон:
@@ -42,6 +53,10 @@
                     </div>
                 </div>
 
+
+
+
+
                 <div class="col-auto">
                     <label for="validationCustomUsername" class="form-label">E-mail:
                     </label>
@@ -52,6 +67,10 @@
                     </div>
                 </div>
 
+
+
+
+
                 <div class="col-auto">
                     <label>
                         Дата рождения:<br />
@@ -59,6 +78,10 @@
                             required="" />
                     </label>
                 </div>
+
+
+
+
 
                 <div class="col-auto">
                     <p>Выберите ваш пол:<br /></p>
@@ -72,6 +95,11 @@
                         <label class="form-check-label" for="someRadioId2">Мужской</label>
                     </div>
                 </div>
+
+
+
+
+
 
                 <div class="col-auto">
                     <label for="validationCustom04" class="form-label">Любимый язык программирования</label>
@@ -91,6 +119,10 @@
                     </select>
                     <div class="invalid-feedback"></div>
                 </div>
+
+
+
+
                 <div class="col-auto">
                     <label>
                         Биография:<br />
@@ -98,6 +130,11 @@
                             placeholder="Напишите свою биографию" required=""></textarea>
                     </label>
                 </div>
+
+
+
+
+
                 <div class="col-auto">
                     С контрактом:
                     <div class="form-check icheck-material-orange">
@@ -108,6 +145,10 @@
                         <div class="invalid-feedback"></div>
                     </div>
                 </div>
+
+
+
+
 
                 <div class="col-auto">
                     <button class="custom-btn btn-1">Сохранить</button>
