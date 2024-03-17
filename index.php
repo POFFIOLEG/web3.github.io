@@ -62,7 +62,7 @@
                     </label>
                     <div class="input-group has-validation">
                         <input type="text" class="form-control rounded-pill" placeholder="Введите ваш E-mail"
-                            name="e-mail" id="validationCustomUsername" aria-describedby="inputGroupPrepend"
+                            name="email" id="validationCustomUsername" aria-describedby="inputGroupPrepend"
                             required="" />
                         <div class="invalid-feedback"></div>
                     </div>
@@ -104,7 +104,8 @@
 
                 <div class="col-auto">
                     <label for="validationCustom04" class="form-label">Любимый язык программирования</label>
-                    <select class="form-select rounded-pill" id="validationCustom04" required="" multiple name="vibor">
+                    <select class="form-select rounded-pill" id="validationCustom04" required="" multiple
+                        name="languages">
                         <option selected="" disabled="" value="">Выберете</option>
                         <option value="Значение1">Pascal</option>
                         <option value="Значение2">C</option>
