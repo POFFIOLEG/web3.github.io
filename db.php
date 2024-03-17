@@ -28,7 +28,7 @@ try {
     $stmt = $db->prepare("INSERT INTO forms (name, email, message) VALUES (:login, :email, :tel)");
     $stmt->bindParam(':login', $login);
     $stmt->bindParam(':email', $email);
-    $stmt->bindParam(':tel', $tel);
+    $stmt->bindParam(':message', $message);
 
     $stmt->execute();
 } catch (PDOException $e) {
