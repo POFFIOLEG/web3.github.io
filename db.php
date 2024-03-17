@@ -23,7 +23,7 @@ $db = new PDO(
 
 //Подготовленный запрос. Не именованные метки.
 try {
-    $stmt = $db->prepare("INSERT INTO forms SET name = ?");
+    $stmt = $db->prepare("INSERT INTO forms SET email = ?");
     $stmt->execute([$_POST['login'], $_POST['email']]);
 } catch (PDOException $e) {
     print ('Error : ' . $e->getMessage());
