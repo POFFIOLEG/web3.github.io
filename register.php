@@ -7,4 +7,4 @@ $date = $_POST['date'];
 $someGroupName = $_POST['someGroupName'];
 $vibor = $_POST['vibor'];
 $bio = $_POST['bio'];
-$check = $_POST['check'];
+$checkt = $_POST['checkt'];

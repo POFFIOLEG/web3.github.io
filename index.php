@@ -140,7 +140,7 @@
                     С контрактом:
                     <div class="form-check icheck-material-orange">
                         <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required=""
-                            name="check" />
+                            name="checkt" />
                         <label class="form-check-label" for="invalidCheck">
                             Ознакомлен (а)
                         </label>
