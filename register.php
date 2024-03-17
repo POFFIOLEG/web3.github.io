@@ -1,5 +1,5 @@
 <?php
-// require_once ('db.php');
+require_once ('db.php');
 echo $login = $_POST['login'];
 echo $tel = $_POST['tel'];
 echo $email = $_POST['email'];
