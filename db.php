@@ -1,8 +1,9 @@
-<?php
-$servername = "kubsu-dev.ru";
+<?PHP
+
+$servername = "kubu-dev.ru";
 $username = "u67307";
 $password = "2532509";
-$dbname = "forms";
+$dbname = "users";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 if (!$conn) {
