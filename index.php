@@ -104,7 +104,7 @@
 
                 <div class="col-auto">
                     <label for="validationCustom04" class="form-label">Любимый язык программирования</label>
-                    <select class="form-select rounded-pill" id="validationCustom04" required="" multiple="multiple">
+                    <select class="form-select rounded-pill" id="validationCustom04" required="" multiple="multiple"
                         name="languages">
                         <option selected="" disabled="" value="">Выберете</option>
                         <option value="Значение1">Pascal</option>
