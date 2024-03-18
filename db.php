@@ -1,17 +1,6 @@
 <?PHP
 
-//$servername = "kubu-dev.ru";
-//$username = "u67307";
-//$password = "2532509";
-//$dbname = "users";
 
-//$conn = new mysqli($servername, $username, $password, $dbname);
-//if (!$conn) {
-//  die ("Connection Fialed" . mysqli_connect_error());
-//} else {
-//  echo "Good";
-//}
-// 
 $user = 'u67307'; // Заменить на ваш логин uXXXXX
 $pass = '2532509'; // Заменить на пароль, такой же, как от SSH
 $db = new PDO(
@@ -32,5 +21,15 @@ $db = new PDO(
 //     print ('Error : ' . $e->getMessage());
 //     exit();
 // }
+$stmt = $conn->prepare("INSERT INTO forms (login, email, message) VALUES (:login, :email, :message)");
+$login = $_POST['login'];
+$email = $_POST['email'];
+$message = $_POST['tel'];
+
+$stmt->bindParam(':login', $login);
+$stmt->bindParam(':email', $email);
+$stmt->bindParam(':message', $message);
+
+$stmt->execute();
 
 ?>
