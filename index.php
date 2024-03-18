@@ -140,7 +140,7 @@
                 <div class="col-auto">
                     С контрактом:
                     <div class="form-check icheck-material-orange">
-                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required=""
+                        <input class="form-check-input" type="checkbox" value="1" id="invalidCheck" required=""
                             name="checkt" />
                         <label class="form-check-label" for="invalidCheck">
                             Ознакомлен (а)
