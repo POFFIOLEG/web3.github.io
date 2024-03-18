@@ -20,14 +20,14 @@ $db = new PDO(
 //     exit();
 // }
 try {
-    $stmt = $db->prepare("INSERT INTO forms (name, email,massage) VALUES (:login, :email,:massage)");
+    $stmt = $db->prepare("INSERT INTO forms (name, email,message) VALUES (:login, :email,:message)");
 
     $login = $_POST['login'];
     $email = $_POST['email'];
     $tel = $_POST['tel'];
     $stmt->bindParam(':login', $login);
     $stmt->bindParam(':email', $email);
-    $stmt->bindParam(':massage', $tel);
+    $stmt->bindParam(':message', $tel);
     $stmt->execute();
 } catch (PDOException $e) {
     print ('Error : ' . $e->getMessage());
