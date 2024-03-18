@@ -14,6 +14,8 @@ $db = new PDO(
 try {
     $stmt = $db->prepare("INSERT INTO forms SET email = ?");
     $stmt->execute([$_POST['login']]);
+    $stmt = $db->prepare("INSERT INTO forms SET name = ?");
+    $stmt->execute([$_POST['login']]);
 } catch (PDOException $e) {
     print ('Error : ' . $e->getMessage());
     exit();
