@@ -1,5 +1,6 @@
-<?php
-// Подключение к базе данных
+<?PHP
+
+
 $user = 'u67307'; // Заменить на ваш логин uXXXXX
 $pass = '2532509'; // Заменить на пароль, такой же, как от SSH
 $db = new PDO(
@@ -7,18 +8,13 @@ $db = new PDO(
     $user,
     $pass,
     [PDO::ATTR_PERSISTENT => true, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]
-);
-
-
-
-$login = $_POST['login'];
-$email = $_POST['email'];
-$message = $_POST['tel'];
-
-$stmt->bindParam(':login', $login);
-$stmt->bindParam(':email', $email);
-$stmt->bindParam(':message', $message);
-
-$stmt->execute();
-
+); // Заменить test на имя БД, совпадает с логином uXXXXX
+try {
+    $stmt = $db->prepare("INSERT INTO programming_languages (lang_name) VALUES (:lang_name)");
+    $izuk = $_POST['izuk'];
+    $stmt->bindParam(':lang_name', $izuk);
+} catch (PDOException $e) {
+    print ('Error : ' . $e->getMessage());
+    exit();
+}
 ?>
