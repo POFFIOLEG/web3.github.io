@@ -9,6 +9,9 @@ $languages = $_POST['languages'];
 $bio = $_POST['bio'];
 $checkt = $_POST['checkt'];
 
+$stmt->bindParam(':login', $login);
+$stmt->bindParam(':tel', $tel);
+$stmt->bindParam(':massage', $email);
 
 
 // $sql = "INSERT INTO forms (login, tel, email) VALUES ('$login', '$tel', '$email')";
