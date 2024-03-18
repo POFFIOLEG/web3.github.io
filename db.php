@@ -32,12 +32,10 @@ $db = new PDO(
 //     print ('Error : ' . $e->getMessage());
 //     exit();
 // }
-$stmt = $db->prepare("INSERT INTO forms (name, email, massage) VALUES (:login, :tel, :email)");
+$stmt = $db->prepare("INSERT INTO forms name VALUES :login");
 $stmt->bindParam(':login', $login);
-$stmt->bindParam(':tel', $tel);
-$stmt->bindParam(':email', $email);
+
 $firstname = "John";
-$lastname = "1234";
-$email = "john@test.com";
+
 $stmt->execute();
 ?>
