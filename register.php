@@ -1,5 +1,5 @@
 <?php
-require_once ('db.php');
+require_once ('prob.php');
 $login = $_POST['name'];
 $tel = $_POST['tel'];
 $email = $_POST['email'];
@@ -8,10 +8,6 @@ $someGroupName = $_POST['someGroupName'];
 $languages = $_POST['languages'];
 $bio = $_POST['bio'];
 $checkt = $_POST['checkt'];
-
-$stmt->bindParam(':name', $login);
-$stmt->bindParam(':tel', $tel);
-$stmt->bindParam(':massage', $email);
 
 
 // $sql = "INSERT INTO forms (login, tel, email) VALUES ('$login', '$tel', '$email')";
