@@ -21,14 +21,11 @@ $db = new PDO(
 //     print ('Error : ' . $e->getMessage());
 //     exit();
 // }
-$stmt = $conn->prepare("INSERT INTO forms (login, email, message) VALUES (:login, :email, :message)");
+$stmt = $conn->prepare("INSERT INTO forms (login) VALUES (:login)");
 $login = $_POST['login'];
-$email = $_POST['email'];
-$message = $_POST['tel'];
 
 $stmt->bindParam(':login', $login);
-$stmt->bindParam(':email', $email);
-$stmt->bindParam(':message', $message);
+
 
 $stmt->execute();
 
