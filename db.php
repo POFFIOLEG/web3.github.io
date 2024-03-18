@@ -22,15 +22,22 @@ $db = new PDO(
 ); // Заменить test на имя БД, совпадает с логином uXXXXX
 
 //Подготовленный запрос. Не именованные метки.
-try {
-    //$stmt = $db->prepare("INSERT INTO forms SET name,email = ?");
-    $stmt = $db->prepare("INSERT INTO forms (name, email, massage) VALUES ('login', 'tel', 'email')");
-    $stmt->execute([$_POST['login']], );
-    $stmt->execute([$_POST['tel']], );
+// try {
+//     //$stmt = $db->prepare("INSERT INTO forms SET name,email = ?");
+//     $stmt = $db->prepare("INSERT INTO forms (name, email, massage) VALUES ('login', 'tel', 'email')");
+//     $stmt->execute([$_POST['login']]);
+//     $stmt->execute([$_POST['tel']]);
 
-} catch (PDOException $e) {
-    print ('Error : ' . $e->getMessage());
-    exit();
-}
-
+// } catch (PDOException $e) {
+//     print ('Error : ' . $e->getMessage());
+//     exit();
+// }
+$stmt = $db->prepare("INSERT INTO forms (name, email, massage) VALUES (:login, :tel, :email)");
+$stmt->bindParam(':login', $login);
+$stmt->bindParam(':tel', $tel);
+$stmt->bindParam(':email', $email);
+$firstname = "John";
+$lastname = "1234";
+$email = "john@test.com";
+$stmt->execute();
 ?>
