@@ -11,33 +11,14 @@ $db = new PDO(
 
 
 
-// Обработка данных из формы
-$name = $_POST['login'];
-$email = $_POST['tel'];
-$message = $_POST['email'];
-$languages = $_POST['languages']; // ЯП передаются в виде массива
+$login = $_POST['login'];
+$email = $_POST['email'];
+$message = $_POST['tel'];
 
-// Сохранение данных из формы в таблице "forms"
-$sql = "INSERT INTO forms (name, email, message) VALUES ('$name', '$email', '$message')";
-// if ($conn->query($sql) === TRUE) {
-//     $form_id = $conn->insert_id; // Получаем ID новой записи
-// } else {
-//     echo "Error: " . $sql . "<br>" . $conn->error;
-// }
+$stmt->bindParam(':login', $login);
+$stmt->bindParam(':email', $email);
+$stmt->bindParam(':message', $message);
 
-// Сохранение выбранных ЯП в таблице "form_languages"
-// foreach ($languages as $language) {
-//     $language = $conn->real_escape_string($language);
-//     $sql = "INSERT INTO languages (language_name) VALUES ('$language')";
-//     if ($conn->query($sql) === TRUE) {
-//         $language_id = $conn->insert_id; // Получаем ID новой записи
-//         $sql = "INSERT INTO form_languages (form_id, language_id) VALUES ('$form_id', '$language_id')";
-//         $conn->query($sql);
-//     } else {
-//         echo "Error: " . $sql . "<br>" . $conn->error;
-//     }
-// }
+$stmt->execute();
 
-// // Закрытие соединения с базой данных
-// $conn->close();
 ?>
