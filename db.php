@@ -11,22 +11,16 @@ $db = new PDO(
 ); // Заменить test на имя БД, совпадает с логином uXXXXX
 
 //Подготовленный запрос. Не именованные метки.
-// try {
-//     //$stmt = $db->prepare("INSERT INTO forms SET name,email = ?");
-//     $stmt = $db->prepare("INSERT INTO forms (name, email) VALUES ('login', 'tel')");
-//     $stmt->execute([$_POST['login']]);
-//     $stmt->execute([$_POST['tel']]);
+try {
+    //$stmt = $db->prepare("INSERT INTO forms SET name,email = ?");
+    $stmt = $db->prepare("INSERT INTO forms (name, email) VALUES ('login', 'tel')");
+    $stmt->execute([$_POST['login']]);
+    $stmt->execute([$_POST['tel']]);
 
-// } catch (PDOException $e) {
-//     print ('Error : ' . $e->getMessage());
-//     exit();
-// }
-$stmt = $conn->prepare("INSERT INTO forms (login) VALUES (:login)");
-$login = $_POST['login'];
+} catch (PDOException $e) {
+    print ('Error : ' . $e->getMessage());
+    exit();
+}
 
-$stmt->bindParam(':login', $login);
-
-
-$stmt->execute();
 
 ?>
