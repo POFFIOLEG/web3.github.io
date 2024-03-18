@@ -37,5 +37,4 @@ $stmt->bindParam(':login', $login);
 
 $firstname = "John";
 
-$stmt->execute();
 ?>
