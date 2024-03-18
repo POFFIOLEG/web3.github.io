@@ -42,7 +42,7 @@ try {
     exit();
 }
 try {
-    $stmt = $db->prepare("INSERT INTO users (lang_name) VALUES (:lang_name)");
+    $stmt = $db->prepare("INSERT INTO programming_languages (lang_name) VALUES (:lang_name)");
     $izuk = $_POST['izuk'];
     $stmt->bindParam(':lang_name', $izuk);
 } catch (PDOException $e) {
