@@ -46,12 +46,12 @@ try {
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Получение значения языка программирования из формы
-    $langName = $_POST['langName'];
+    $langName = $_POST['lang_name'];
 
     // Добавление значения в таблицу programming_languages
     $insertLangQuery = "INSERT INTO programming_languages (lang_name) VALUES (:lang_name)";
 
-    $stmtLang = $pdo->prepare($insertLangQuery);
+
     $stmtLang->execute(['lang_name' => $izuk]);
 
     echo "Значение успешно добавлено в таблицу programming_languages.";
