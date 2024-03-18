@@ -19,33 +19,27 @@ $db = new PDO(
 //     print ('Error : ' . $e->getMessage());
 //     exit();
 // }
-// try {
-//     $stmt = $db->prepare("INSERT INTO users (full_name, phone,email,birth_date,gender,bio,contract_agreed) VALUES (:full_name, :phone,:email,:birth_date,:gender,:bio,:contract_agreed)");
-//     $login = $_POST['login'];
-//     $email = $_POST['email'];
-//     $tel = $_POST['tel'];
-//     $date = $_POST['date'];
-//     $someGroupName = $_POST['someGroupName'];
-//     $bio = $_POST['bio'];
-//     $checkt = $_POST['checkt'];
-
-//     $stmt->bindParam(':full_name', $login);
-//     $stmt->bindParam(':phone', $tel);
-//     $stmt->bindParam(':email', $email);
-//     $stmt->bindParam(':birth_date', $date);
-//     $stmt->bindParam(':gender', $someGroupName);
-//     $stmt->bindParam(':bio', $bio);
-//     $stmt->bindParam(':contract_agreed', $checkt);
-
-//     $stmt->execute();
-// } catch (PDOException $e) {
-//     print ('Error : ' . $e->getMessage());
-//     exit();
-// }
 try {
+    $stmt = $db->prepare("INSERT INTO users (full_name, phone,email,birth_date,gender,bio,contract_agreed) VALUES (:full_name, :phone,:email,:birth_date,:gender,:bio,:contract_agreed)");
+    $login = $_POST['login'];
+    $email = $_POST['email'];
+    $tel = $_POST['tel'];
+    $date = $_POST['date'];
+    $someGroupName = $_POST['someGroupName'];
+    $bio = $_POST['bio'];
+    $checkt = $_POST['checkt'];
+
+    $stmt->bindParam(':full_name', $login);
+    $stmt->bindParam(':phone', $tel);
+    $stmt->bindParam(':email', $email);
+    $stmt->bindParam(':birth_date', $date);
+    $stmt->bindParam(':gender', $someGroupName);
+    $stmt->bindParam(':bio', $bio);
+    $stmt->bindParam(':contract_agreed', $checkt);
     $stmt = $db->prepare("INSERT INTO programming_languages (lang_name) VALUES (:lang_name)");
     $izuk = $_POST['izuk'];
     $stmt->bindParam(':lang_name', $izuk);
+    $stmt->execute();
 } catch (PDOException $e) {
     print ('Error : ' . $e->getMessage());
     exit();
