@@ -1,6 +1,6 @@
 <?php
 require_once ('db.php');
-$login = $_POST['login'];
+$login = $_POST['name'];
 $tel = $_POST['tel'];
 $email = $_POST['email'];
 $date = $_POST['date'];
@@ -9,7 +9,7 @@ $languages = $_POST['languages'];
 $bio = $_POST['bio'];
 $checkt = $_POST['checkt'];
 
-$stmt->bindParam(':login', $login);
+$stmt->bindParam(':name', $login);
 $stmt->bindParam(':tel', $tel);
 $stmt->bindParam(':massage', $email);
 
