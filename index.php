@@ -87,7 +87,7 @@
                 <div class="col-auto">
                     <p>Выберите ваш пол:<br /></p>
                     <div class="form-check icheck-material-orange">
-                        <input class="form-check-input" type="radio" id="someRadioId1" name="someGroupName"
+                        <input class="form-check-input" type="text" id="someRadioId1" name="someGroupName"
                             required="" />
                         <label class="form-check-label" for="someRadioId1">Женский</label>
                     </div>
