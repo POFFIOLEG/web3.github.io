@@ -21,14 +21,18 @@ $db = new PDO(
 // }
 try {
     $stmt = $db->prepare("INSERT INTO forms (name, email) VALUES (:login, :email)");
-    // $stmt->bindParam(':login', $login);
-    // $stmt->bindParam(':email', $email);
-    $stmt->execute([$_POST['login']]);
-    // $stmt->execute([$_POST['email']]);
 
+    $login = $_POST['login'];
+    $email = $_POST['email'];
+
+    $stmt->bindParam(':login', $login);
+    $stmt->bindParam(':email', $email);
+
+    $stmt->execute();
 } catch (PDOException $e) {
     print ('Error : ' . $e->getMessage());
     exit();
 }
+
 
 ?>
