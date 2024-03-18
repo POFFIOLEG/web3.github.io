@@ -41,34 +41,42 @@ try {
     print ('Error : ' . $e->getMessage());
     exit();
 }
+try {
+    $stmt = $db->prepare("INSERT INTO users (lang_name) VALUES (:lang_name)");
+    $izuk = $_POST['izuk'];
+    $stmt->bindParam(':lang_name', $izuk);
+} catch (PDOException $e) {
+    print ('Error : ' . $e->getMessage());
+    exit();
+}
 // Первоначальное подключение к базе данных (код остается тем же)
 // ...
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Получение значения языка программирования из формы
-    $langName = $_POST['lang_name'];
+// if ($_SERVER["REQUEST_METHOD"] == "POST") {
+//     // Получение значения языка программирования из формы
+//     $langName = $_POST['lang_name'];
 
-    // Добавление значения в таблицу programming_languages
-    $insertLangQuery = "INSERT INTO programming_languages (lang_name) VALUES (:lang_name)";
+//     // Добавление значения в таблицу programming_languages
+//     $insertLangQuery = "INSERT INTO programming_languages (lang_name) VALUES (:lang_name)";
 
 
-    $stmtLang->execute(['lang_name' => $izuk]);
+//     $stmt->execute(['lang_name' => $izuk]);
 
-    echo "Значение успешно добавлено в таблицу programming_languages.";
-}
+//     echo "Значение успешно добавлено в таблицу programming_languages.";
+// }
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Получение значения пользователя и языка программирования из формы
-    $userId = $_POST['userId']; // Предположим, что у вас есть переменная $userId с ID пользователя
-    $langId = $_POST['langId']; // Предположим, что у вас есть переменная $langId с ID языка программирования
+// if ($_SERVER["REQUEST_METHOD"] == "POST") {
+//     // Получение значения пользователя и языка программирования из формы
+//     $userId = $_POST['userId']; // Предположим, что у вас есть переменная $userId с ID пользователя
+//     $langId = $_POST['langId']; // Предположим, что у вас есть переменная $langId с ID языка программирования
 
-    // Добавление связи в таблицу user_languages
-    $insertUserLangQuery = "INSERT INTO user_languages (user_id, lang_id) VALUES (:userId, :langId)";
+//     // Добавление связи в таблицу user_languages
+//     $insertUserLangQuery = "INSERT INTO user_languages (user_id, lang_id) VALUES (:userId, :langId)";
 
-    $stmtUserLang = $pdo->prepare($insertUserLangQuery);
-    $stmtUserLang->execute(['userId' => $userId, 'langId' => $langId]);
+//     $stmtUserLang = $pdo->prepare($insertUserLangQuery);
+//     $stmtUserLang->execute(['userId' => $userId, 'langId' => $langId]);
 
-    echo "Связь успешно добавлена в таблицу user_languages.";
-}
+//     echo "Связь успешно добавлена в таблицу user_languages.";
+// }
 
 ?>
