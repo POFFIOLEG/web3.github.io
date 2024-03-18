@@ -106,19 +106,19 @@
                 <div class="col-auto">
                     <label for="validationCustom04" class="form-label">Любимый язык программирования</label>
                     <select class="form-select rounded-pill" id="validationCustom04" required="" multiple="multiple"
-                        name="ipl">
+                        name="izuk">
                         <option selected="" disabled="" value="">Выберете</option>
-                        <option value="Значение1">Pascal</option>
-                        <option value="Значение2">C</option>
-                        <option value="Значение3">C++</option>
-                        <option value="Значение4">JavaScript</option>
-                        <option value="Значение5">PHP</option>
-                        <option value="Значение6">Python</option>
-                        <option value="Значение7">Java</option>
-                        <option value="Значение8">Haskel</option>
-                        <option value="Значение9">Clojure</option>
-                        <option value="Значение10">Prolog</option>
-                        <option value="Значение11">Scala</option>
+                        <option value="1">Pascal</option>
+                        <option value="2">C</option>
+                        <option value="3">C++</option>
+                        <option value="4">JavaScript</option>
+                        <option value="5">PHP</option>
+                        <option value="6">Python</option>
+                        <option value="7">Java</option>
+                        <option value="8">Haskel</option>
+                        <option value="9">Clojure</option>
+                        <option value="10">Prolog</option>
+                        <option value="11">Scala</option>
                     </select>
                     <div class="invalid-feedback"></div>
                 </div>
