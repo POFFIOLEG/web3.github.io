@@ -36,19 +36,22 @@ try {
     $stmt->bindParam(':gender', $someGroupName);
     $stmt->bindParam(':bio', $bio);
     $stmt->bindParam(':contract_agreed', $checkt);
+    $stmt = $db->prepare("INSERT INTO programming_languages (lang_name) VALUES (:lang_name)");
+    $izuk = $_POST['izuk'];
+    $stmt->bindParam(':lang_name', $izuk);
     $stmt->execute();
 } catch (PDOException $e) {
     print ('Error : ' . $e->getMessage());
     exit();
 }
-try {
-    $stmt = $db->prepare("INSERT INTO programming_languages (lang_name) VALUES (:lang_name)");
-    $izuk = $_POST['izuk'];
-    $stmt->bindParam(':lang_name', $izuk);
-} catch (PDOException $e) {
-    print ('Error : ' . $e->getMessage());
-    exit();
-}
+// try {
+//     $stmt = $db->prepare("INSERT INTO programming_languages (lang_name) VALUES (:lang_name)");
+//     $izuk = $_POST['izuk'];
+//     $stmt->bindParam(':lang_name', $izuk);
+// } catch (PDOException $e) {
+//     print ('Error : ' . $e->getMessage());
+//     exit();
+// }
 // Первоначальное подключение к базе данных (код остается тем же)
 // ...
 
