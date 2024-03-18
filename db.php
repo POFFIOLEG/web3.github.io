@@ -24,7 +24,7 @@ try {
     // $stmt->bindParam(':login', $login);
     // $stmt->bindParam(':email', $email);
     $stmt->execute([$_POST['login']]);
-    $stmt->execute([$_POST['email']]);
+    // $stmt->execute([$_POST['email']]);
 
 } catch (PDOException $e) {
     print ('Error : ' . $e->getMessage());
