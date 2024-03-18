@@ -87,12 +87,13 @@
                 <div class="col-auto">
                     <p>Выберите ваш пол:<br /></p>
                     <div class="form-check icheck-material-orange">
-                        <input class="form-check-input" type="text" id="someRadioId1" name="someGroupName"
-                            required="" />
+                        <input class="form-check-input" type="radio" value="Женский" id="someRadioId1"
+                            name="someGroupName" required="" />
                         <label class="form-check-label" for="someRadioId1">Женский</label>
                     </div>
                     <div class="form-check icheck-material-orange">
-                        <input class="form-check-input" type="radio" id="someRadioId2" name="someGroupName" />
+                        <input class="form-check-input" type="radio" value="Мужской" id="someRadioId2"
+                            name="someGroupName" />
                         <label class="form-check-label" for="someRadioId2">Мужской</label>
                     </div>
                 </div>
@@ -140,7 +141,7 @@
                 <div class="col-auto">
                     С контрактом:
                     <div class="form-check icheck-material-orange">
-                        <input class="form-check-input" type="checkbox" value="1" id="invalidCheck" required=""
+                        <input class="form-check-input" type="checkbox" value="Ознакомлен" id="invalidCheck" required=""
                             name="checkt" />
                         <label class="form-check-label" for="invalidCheck">
                             Ознакомлен (а)
