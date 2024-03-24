@@ -37,10 +37,10 @@ $db = new PDO(
     [PDO::ATTR_PERSISTENT => true, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]
 );
 
-$sql = "SELECT users.id AS user_id, programming_languages.id AS language_id 
+$sql = "SELECT users.id AS user_id, programming_languages.id AS lang_id 
         FROM users 
-        JOIN user_programming_languages ON users.id = user_programming_languages.user_id 
-        JOIN programming_languages ON programming_languages.id = user_programming_languages.language_id";
+        JOIN users ON users.id = users.user_id 
+        JOIN programming_languages ON programming_languages.id = users.lang_id";
 $stmt = $db->query($sql);
 
 while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
@@ -48,10 +48,10 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
     $language_id = $row['language_id'];
 
     // Создать SQL-запрос для вставки данных в таблицу user_languages
-    $insertSql = "INSERT INTO user_languages (user_id, language_id) VALUES (:user_id, :language_id)";
+    $insertSql = "INSERT INTO user_languages (user_id, lang_id) VALUES (:user_id, :lang_id)";
     $insertStmt = $pdo->prepare($insertSql);
     $insertStmt->bindParam(':user_id', $user_id);
-    $insertStmt->bindParam(':language_id', $language_id);
+    $insertStmt->bindParam(':lang_id', $language_id);
     $insertStmt->execute();
 }
 
