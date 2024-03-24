@@ -34,7 +34,7 @@ try {
     print ('Error : ' . $e->getMessage());
     exit();
 }
-foreach ($languages as $izuk) {
+foreach ($izuk as $language) {
     $stmt = $pdo->prepare("INSERT INTO languages (language_name) VALUES (:language)");
     $izuk = $_POST['izuk'];
     $stmt->bindParam(':language', $izuk);
