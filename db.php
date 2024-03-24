@@ -34,11 +34,11 @@ try {
     print ('Error : ' . $e->getMessage());
     exit();
 }
-
-foreach ($lange as $lang_name) {
+$Languages = $_POST['lange'];
+foreach ($Languages as $lang_name) {
     $stmt = $pdo->prepare("INSERT INTO programming_languages (lang_id, lang_name) VALUES (:lang_id, :lang_name)");
-    $lange[] = $_POST['lange'];
-    $stmt->bindParam(':lang_name', $lange[]);
+    // $lange[] = $_POST['lange'];
+    $stmt->bindParam(':lang_name', $Languages);
     // $stmt->execute(['user_id' => $userId, 'lang_id' => $langId]);
 }
 
