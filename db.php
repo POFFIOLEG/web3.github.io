@@ -34,7 +34,7 @@ try {
     print ('Error : ' . $e->getMessage());
     exit();
 }
-$Languages = $_POST['lange'];
+$Languages = implode($_POST['lange']);
 foreach ($Languages as $lang_name) {
     $stmt = $db->prepare("INSERT INTO programming_languages (lang_id, lang_name) VALUES (:lang_id, :lang_name)");
     // $lange[] = $_POST['lange'];
