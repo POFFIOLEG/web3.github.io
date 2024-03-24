@@ -37,14 +37,19 @@ $db = new PDO(
     [PDO::ATTR_PERSISTENT => true, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]
 );
 
-
-
-
-$sql = "INSERT INTO user_languages (user_id, lang_id) 
-        SELECT id_name AS users, id_names AS programming_languages 
+$sql = "INSERT INTO user_languages (user_id, language_id) 
+        SELECT u.id AS user_id, p.id AS language_id 
         FROM users u
-        JOIN users upl ON u.id = id_name 
-        JOIN programming_languages p ON p.id = id_names";
+        JOIN user_programming_languages upl ON u.id = upl.user_id 
+        JOIN programming_languages p ON p.id = upl.language_id";
+
+
+
+// $sql = "INSERT INTO user_languages (user_id, lang_id) 
+//         SELECT id_name AS users, id_names AS programming_languages 
+//         FROM users u
+//         JOIN users upl ON u.id = id_name 
+//         JOIN programming_languages p ON p.id = id_names";
 
 $stmt = $db->prepare($sql);
 $stmt->execute();
