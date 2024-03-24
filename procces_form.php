@@ -13,10 +13,10 @@ $db = new PDO(
 
 
 
-$sql = "INSERT INTO user_languages (user_id, lang_id)
-        SELECT u.id_name AS user_id, p.id_names AS lang_id
-        FROM users u
-        JOIN programming_languages p ON 1=1";
+// $sql = "INSERT INTO user_languages (user_id, lang_id)
+//         SELECT u.id_name AS user_id, p.id_names AS lang_id
+//         FROM users u
+//         JOIN programming_languages p ON 1=1";
 
 // if ($conn->query($db) === TRUE) {
 //     echo "Связь успешно установлена!";
@@ -24,6 +24,11 @@ $sql = "INSERT INTO user_languages (user_id, lang_id)
 //     echo "Ошибка: " . $sql . "<br>" . $conn->error;
 // }
 
+$sql = "INSERT INTO user_languages (user_id, lang_id) 
+        SELECT u.id_name AS user_id, p.id_names AS lang_id 
+        FROM users u
+        JOIN users u ON u.id = upl.user_id 
+        JOIN programming_languages p ON p.id = upl.lang_id";
 
 
 
