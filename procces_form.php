@@ -25,6 +25,6 @@ $sql = "INSERT INTO user_languages (user_id, lang_id)
 // }
 
 
-$conn->close();
+
 
 ?>
