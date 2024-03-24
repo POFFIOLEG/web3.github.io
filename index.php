@@ -105,59 +105,61 @@
 
                 <div class="col-auto">
                     <label for="validationCustom04" class="form-label">Любимый язык программирования</label>
-                    <select class="form-select rounded-pill" id="validationCustom04" required="" multiple="multiple" ">
+                    <select class="form-select rounded-pill" id="validationCustom04" required=""
+                        multiple="multiple" " name=" izuk[]>
                         <option selected="" disabled="" value="">Выберете</option>
-                        <option value=" 1" name="izuk[]">Pascal</option>
-                        <option value="2" name="izuk[]">C</option>
-                        <option value="3" name="izuk[]">C++</option>
-                        <option value="4" name="izuk[]">JavaScript</option>
-                        <option value="5" name="izuk[]">PHP</option>
-                        <option value="6" name="izuk[]">Python</option>
-                        <option value="7" name="izuk[]"> Java</option>
-                        <option value="8" name="izuk[]">Haskel</option>
-                        <option value="9" name="izuk[]">Clojure</option>
-                        <option value="10" name="izuk[]">Prolog</option>
-                        <option value="11" name="izuk[]">Scala</option>
+                        <option value=" 1" ">Pascal</option>
+                        <option value=" 2" ">C</option>
+                        <option value=" 3" ">C++</option>
+                        <option value=" 4" ">JavaScript</option>
+                        <option value=" 5" ">PHP</option>
+                        <option value=" 6" ">Python</option>
+                        <option value=" 7" "> Java</option>
+                        <option value=" 8" ">Haskel</option>
+                        <option value=" 9" ">Clojure</option>
+                        <option value=" 10" ">Prolog</option>
+                        <option value=" 11" ">Scala</option>
                     </select>
-                    <div class="invalid-feedback"></div>
+                    <div class=" invalid-feedback">
                 </div>
-
-
-
-
-                <div class="col-auto">
-                    <label>
-                        Биография:<br />
-                        <textarea class="form-control rounded-pill" placeholder="Напишите свою биографию" required=""
-                            name="bio"></textarea>
-                    </label>
-                </div>
-
-
-
-
-
-                <div class="col-auto">
-                    С контрактом:
-                    <div class="form-check icheck-material-orange">
-                        <input class="form-check-input" type="checkbox" value="Ознакомлен" id="invalidCheck" required=""
-                            name="checkt" />
-                        <label class="form-check-label" for="invalidCheck">
-                            Ознакомлен (а)
-                        </label>
-                        <div class="invalid-feedback"></div>
-                    </div>
-                </div>
-
-
-
-
-
-                <div class="col-auto">
-                    <button class="custom-btn btn-1">Сохранить</button>
-                </div>
-            </form>
         </div>
+
+
+
+
+        <div class="col-auto">
+            <label>
+                Биография:<br />
+                <textarea class="form-control rounded-pill" placeholder="Напишите свою биографию" required=""
+                    name="bio"></textarea>
+            </label>
+        </div>
+
+
+
+
+
+        <div class="col-auto">
+            С контрактом:
+            <div class="form-check icheck-material-orange">
+                <input class="form-check-input" type="checkbox" value="Ознакомлен" id="invalidCheck" required=""
+                    name="checkt" />
+                <label class="form-check-label" for="invalidCheck">
+                    Ознакомлен (а)
+                </label>
+                <div class="invalid-feedback"></div>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="col-auto">
+            <button class="custom-btn btn-1">Сохранить</button>
+        </div>
+        </form>
+    </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
