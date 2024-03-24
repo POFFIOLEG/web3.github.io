@@ -39,7 +39,7 @@ $db = new PDO(
 
 
 // Получение значения из table1
-$stmt1 = $pdo->query("SELECT column1 FROM users");
+$stmt1 = $pdo->query("SELECT user_id FROM users");
 $value1 = $stmt1->fetchColumn();
 
 // Получение значения из table2
