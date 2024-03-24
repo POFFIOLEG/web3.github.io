@@ -38,10 +38,10 @@ $db = new PDO(
 );
 
 $sql = "INSERT INTO user_languages (user_id, language_id) 
-        SELECT u.id AS user_id, p.id AS language_id 
+        SELECT id_name AS user_id, id_names AS language_id 
         FROM users u
-        JOIN users upl ON u.id_name = upl.user_id 
-        JOIN programming_languages p ON p.id_names = upl.language_id";
+        JOIN users upl ON id_name = upl.user_id 
+        JOIN programming_languages p ON id_names = upl.language_id";
 
 
 
