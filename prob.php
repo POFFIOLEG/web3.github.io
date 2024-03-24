@@ -13,8 +13,9 @@ try {
     $stmt = $db->prepare("INSERT INTO programming_languages (lang_name) VALUES (:lang_name)");
     $lange = $_POST['lange'];
 
-
-    $stmt->bindParam(':lang_name', $lange);
+    $kl = implode($Languages);
+    $stmt->bindParam(':lang_name', $kl);
+    // $stmt->bindParam(':lang_name', $lange);
     // $stmt->bindParam(':phone', $tel);
     // $stmt->bindParam(':email', $email);
     // $stmt->bindParam(':birth_date', $date);
