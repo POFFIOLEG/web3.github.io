@@ -108,8 +108,8 @@
                     <select class="form-select rounded-pill" id="validationCustom04" required=""
                         multiple="multiple" " name=" lange[]">
                         <option selected="" disabled="" value="">Выберете</option>
-                        <option value="Pascal">Pascal</option>
-                        <option value=" C">C</option>
+                        <option value="1">Pascal</option>
+                        <option value=" 2">C</option>
                         <option value=" 3">C++</option>
                         <option value=" 4">JavaScript</option>
                         <option value=" 5">PHP</option>
