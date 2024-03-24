@@ -40,9 +40,9 @@ try {
 //     $stmt->bindParam(':language', $izuk);
 //     // $stmt->execute(['language' => $izuk]);
 // }
-foreach ($izuk as $programming_languages) {
-    $stmt = $pdo->prepare("INSERT INTO user_languages (user_id, lang_id) VALUES (:user_id, :lang_id)");
-    $stmt->execute(['user_id' => $userId, 'lang_id' => $langId]);
+foreach ($izuk as $lang_name) {
+    $stmt = $pdo->prepare("INSERT INTO programming_languages (lang_id, lang_name) VALUES (:lang_id, :lang_name)");
+    $stmt->execute(['lang_name' => $izuk]);
 }
 
 echo "Data inserted successfully!";
