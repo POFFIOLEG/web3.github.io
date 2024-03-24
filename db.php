@@ -37,7 +37,7 @@ try {
 foreach ($languages as $language) {
     $stmt = $pdo->prepare("INSERT INTO languages (language_name) VALUES (:language)");
     $stmt->execute(['language' => $language]);
-
+}
 
 // Предположим, что у нас также есть данные для заполнения таблицы form_languages
 // $formLanguages = [
