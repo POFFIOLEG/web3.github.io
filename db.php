@@ -51,5 +51,5 @@ foreach ($languages as $language) {
 foreach ($formLanguages as $formLanguage) {
     $stmt = $pdo->prepare("INSERT INTO form_languages (form_id, language_id) VALUES (:form_id, :language_id)");
     $stmt->execute($formLanguage);
-
+}
 ?>
