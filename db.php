@@ -44,7 +44,7 @@ $db = new PDO(
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $userId = 1; // Здесь нужно получить ID пользователя, либо использовать текущего пользователя
 
-    $favoriteLanguages = $_POST['izuk[]'];
+    $favoriteLanguages = $_POST['izuk'];
 
     // Сохранение выбранных языков программирования в таблицу user_languages
     foreach ($favoriteLanguages as $langId) {
