@@ -8,5 +8,4 @@ $someGroupName = $_POST['someGroupName'];
 $izuk = $_POST['izuk'];
 $bio = $_POST['bio'];
 $checkt = $_POST['checkt'];
-$programming_languages[] = $_POST['programming_languages']
-    ?>
+?>
