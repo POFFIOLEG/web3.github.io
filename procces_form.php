@@ -18,11 +18,11 @@ $sql = "INSERT INTO user_languages (user_id, lang_id)
         FROM users u
         JOIN programming_languages p ON 1=1";
 
-if ($conn->query($sql) === TRUE) {
-    echo "Связь успешно установлена!";
-} else {
-    echo "Ошибка: " . $sql . "<br>" . $conn->error;
-}
+// if ($conn->query($db) === TRUE) {
+//     echo "Связь успешно установлена!";
+// } else {
+//     echo "Ошибка: " . $sql . "<br>" . $conn->error;
+// }
 
 
 $conn->close();
