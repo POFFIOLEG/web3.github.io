@@ -36,7 +36,9 @@ try {
 }
 foreach ($languages as $izuk) {
     $stmt = $pdo->prepare("INSERT INTO languages (language_name) VALUES (:language)");
-    $stmt->execute(['language' => $izuk]);
+    $izuk = $_POST['izuk'];
+    $stmt->bindParam(':language', $izuk);
+    // $stmt->execute(['language' => $izuk]);
 }
 
 // Предположим, что у нас также есть данные для заполнения таблицы form_languages
@@ -48,8 +50,8 @@ foreach ($languages as $izuk) {
 // ];
 
 // Заполнение таблицы form_languages
-foreach ($formLanguages as $izuk) {
-    $stmt = $pdo->prepare("INSERT INTO form_languages (form_id, language_id) VALUES (:form_id, :language_id)");
-    $stmt->execute($izuk);
-}
+// foreach ($formLanguages as $izuk) {
+//     $stmt = $pdo->prepare("INSERT INTO form_languages (form_id, language_id) VALUES (:form_id, :language_id)");
+//     $stmt->execute($izuk);
+// }
 ?>
