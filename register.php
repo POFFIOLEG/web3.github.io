@@ -5,7 +5,7 @@ $tel = $_POST['tel'];
 $email = $_POST['email'];
 $date = $_POST['date'];
 $someGroupName = $_POST['someGroupName'];
-$ipl = $_POST['izuk'];
+$izuk = $_POST['izuk'];
 $bio = $_POST['bio'];
 $checkt = $_POST['checkt'];
 ?>
