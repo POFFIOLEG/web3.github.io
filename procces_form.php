@@ -47,7 +47,7 @@ $sql = "SELECT u.id AS user_id, p.id AS language_id
         FROM users u
         JOIN user_programming_languages upl ON u.id = upl.user_id 
         JOIN programming_languages p ON p.id = upl.language_id";
-$stmt = $pdo->query($sql);
+$stmt = $db->query($sql);
 
 
 while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
@@ -56,7 +56,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 
     // Создать SQL-запрос для вставки данных в таблицу user_languages
     $insertSql = "INSERT INTO user_languages (user_id, lang_id) VALUES (:user_id, :lang_id)";
-    $insertStmt = $pdo->prepare($insertSql);
+    $insertStmt = $db->prepare($insertSql);
     $insertStmt->bindParam(':user_id', $user_id);
     $insertStmt->bindParam(':lang_id', $language_id);
     $insertStmt->execute();
