@@ -37,11 +37,18 @@ $db = new PDO(
     [PDO::ATTR_PERSISTENT => true, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]
 );
 
-$sql = "SELECT users.id AS user_id, programming_languages.id AS lang_id 
-        FROM users 
-        JOIN users ON users.id = users.user_id 
-        JOIN programming_languages ON programming_languages.id = users.lang_id";
-$stmt = $db->query($sql);
+// $sql = "SELECT users.id AS user_id, programming_languages.id AS lang_id 
+//         FROM users 
+//         JOIN users ON users.id = users.user_id 
+//         JOIN programming_languages ON programming_languages.id = users.lang_id";
+// $stmt = $db->query($sql);
+
+$sql = "SELECT u.id AS user_id, p.id AS language_id 
+        FROM users u
+        JOIN user_programming_languages upl ON u.id = upl.user_id 
+        JOIN programming_languages p ON p.id = upl.language_id";
+$stmt = $pdo->query($sql);
+
 
 while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
     $user_id = $row['user_id'];
