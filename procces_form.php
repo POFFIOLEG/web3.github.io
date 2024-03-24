@@ -41,7 +41,7 @@ $sql = "SELECT users.id AS user_id, programming_languages.id AS language_id
         FROM users 
         JOIN user_programming_languages ON users.id = user_programming_languages.user_id 
         JOIN programming_languages ON programming_languages.id = user_programming_languages.language_id";
-$stmt = $pdo->query($sql);
+$stmt = $db->query($sql);
 
 while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
     $user_id = $row['user_id'];
