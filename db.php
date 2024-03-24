@@ -40,12 +40,16 @@ try {
 //     $stmt->bindParam(':language', $izuk);
 //     // $stmt->execute(['language' => $izuk]);
 // }
-foreach ($izuk as $lang_name) {
-    $stmt = $pdo->prepare("INSERT INTO programming_languages (lang_id, lang_name) VALUES (:lang_id, :lang_name)");
-    $stmt->execute(['lang_name' => $izuk]);
+// foreach ($izuk as $lang_name) {
+//     $stmt = $pdo->prepare("INSERT INTO programming_languages (lang_id, lang_name) VALUES (:lang_id, :lang_name)");
+//     $stmt->execute(['lang_name' => $izuk]);
+// }
+foreach ($programmingLanguages as $langId) {
+    $stmt = $pdo->prepare("INSERT INTO user_languages (user_id, lang_id) VALUES (:user_id, :lang_id)");
+    $stmt->execute(['user_id' => $userId, 'lang_id' => $langId]);
 }
 
-echo "Data inserted successfully!";
+
 
 // Предположим, что у нас также есть данные для заполнения таблицы form_languages
 // $formLanguages = [
