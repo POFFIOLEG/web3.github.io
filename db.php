@@ -34,5 +34,22 @@ try {
     print ('Error : ' . $e->getMessage());
     exit();
 }
+foreach ($languages as $language) {
+    $stmt = $pdo->prepare("INSERT INTO languages (language_name) VALUES (:language)");
+    $stmt->execute(['language' => $language]);
+
+
+// Предположим, что у нас также есть данные для заполнения таблицы form_languages
+// $formLanguages = [
+//     ['form_id' => 1, 'language_id' => 1],
+//     ['form_id' => 1, 'language_id' => 2],
+//     ['form_id' => 2, 'language_id' => 1],
+//     ['form_id' => 3, 'language_id' => 3]
+// ];
+
+// Заполнение таблицы form_languages
+foreach ($formLanguages as $formLanguage) {
+    $stmt = $pdo->prepare("INSERT INTO form_languages (form_id, language_id) VALUES (:form_id, :language_id)");
+    $stmt->execute($formLanguage);
 
 ?>
