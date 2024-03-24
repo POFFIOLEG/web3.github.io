@@ -14,10 +14,10 @@ $db = new PDO(
 
 
 
-$sql = "INSERT INTO user_languages (user_id, lang_id) 
-        SELECT u.id_name AS user_id, p.id_names AS lang_id 
-        FROM users u , programming_languages p
-        JOIN user_languages upl ON u.id_name = upl.user_id ,p ON p.id_names = upl.lang_id";
+$sql = "INSERT INTO user_languages (user_id) 
+        SELECT u.id_name AS user_id 
+        FROM users u 
+        JOIN user_languages upl ON u.id_name = upl.user_id ";
 $stmt = $db->prepare($sql);
 
 
