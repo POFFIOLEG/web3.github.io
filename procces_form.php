@@ -29,7 +29,7 @@ $sql = "INSERT INTO user_languages (user_id, lang_id)
         FROM users u
         JOIN users u ON u.id = upl.user_id 
         JOIN programming_languages p ON p.id = upl.lang_id";
-
+$stmt = $pdo->prepare($sql);
 
 
 ?>
