@@ -39,11 +39,11 @@ $db = new PDO(
 
 
 // Получение значения из table1
-$stmt1 = $pdo->query("SELECT user_id FROM users");
+$stmt1 = $db->query("SELECT column1 FROM users");
 $value1 = $stmt1->fetchColumn();
 
 // Получение значения из table2
-$stmt2 = $pdo->query("SELECT column2 FROM programming_languages");
+$stmt2 = $db->query("SELECT column2 FROM programming_languages");
 $value2 = $stmt2->fetchColumn();
 
 // Подготовка SQL запроса для вставки данных в table3
