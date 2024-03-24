@@ -34,11 +34,12 @@ try {
     print ('Error : ' . $e->getMessage());
     exit();
 }
-$Languages = implode($_POST['lange']);
+$Languages = $_POST['lange'];
 foreach ($Languages as $lang_name) {
     $stmt = $db->prepare("INSERT INTO programming_languages (lang_id, lang_name) VALUES (:lang_id, :lang_name)");
     // $lange[] = $_POST['lange'];
-    $stmt->bindParam(':lang_name', $Languages);
+    $kl = implode($Languages);
+    $stmt->bindParam(':lang_name', $kl);
     // $stmt->execute(['user_id' => $userId, 'lang_id' => $langId]);
 }
 
