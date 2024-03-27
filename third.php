@@ -17,11 +17,11 @@ try {
     // $kl = implode($Languages);
     // $stmt->bindParam(':user_id', $user_id);
     // $stmt->bindParam(':language', $kl);
-    $languages = $_POST['languages']; // Предполагая, что данные о языках передаются в виде массива
-
+    $languages = $_POST['lange']; // Предполагая, что данные о языках передаются в виде массива
     foreach ($languages as $language) {
         $stmt->bindParam(':user_id', $user_id);
-        $stmt->bindParam(':language', $language);
+        $kl = implode($Languages);
+        $stmt->bindParam(':language', $kl);
         $stmt->execute();
     }
     $stmt->execute();
