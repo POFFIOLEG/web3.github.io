@@ -57,6 +57,39 @@ h3#form.text-center {
 }
 
 
+h5 {
+    text-align: center;
+    color: aliceblue;
+}
+
+a {
+    position: absolute;
+    text-align: center;
+    color: aliceblue;
+    font-weight: 900;
+}
+
+img {
+    width: 94%;
+    height: 94%;
+}
+
+div.wrap.lh-lg.font-monospace {
+    position: absolute;
+    padding: 0px;
+    margin: 10px 610px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 100px rgb(106, 10, 109);
+    background-color: #0000003f;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+    align-items: stretch;
+}
+
+
 @media screen and (min-width: 415px) {
     body {
         background-image: url(v1016-b-09.jpg);
