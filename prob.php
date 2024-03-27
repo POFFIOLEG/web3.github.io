@@ -10,11 +10,11 @@ $db = new PDO(
 );
 
 try {
-    $stmt = $db->prepare("INSERT INTO programming_languages (lang_name) VALUES (:lang_name)");
+    $stmt = $db->prepare("INSERT INTO programming_languages (language_name) VALUES (:language_name)");
     $lange = $_POST['lange'];
 
     $kl = implode($Languages);
-    $stmt->bindParam(':lang_name', $kl);
+    $stmt->bindParam(':language_name', $kl);
     $stmt->execute();
 
 } catch (PDOException $e) {
