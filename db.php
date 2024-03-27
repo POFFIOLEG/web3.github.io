@@ -26,11 +26,24 @@ try {
     $stmt->bindParam(':gender', $someGroupName);
     $stmt->bindParam(':bio', $bio);
     $stmt->bindParam(':contract_agreed', $checkt);
-    $stmt->execute();
+
+    ;
+    $stmt_user->execute();
+    $user_id = $db->lastInsertId();
+    $stmt = $db->prepare("INSERT INTO user_languages (user_id, language) VALUES (:user_id,:language)");
+    $stmt->bindParam(':user_id', $user_id);
+    $languages = $_POST['lange']; // Предполагая, что данные о языках передаются в виде массива
+    foreach ($languages as $language) {
+        $kl = implode($Languages);
+        $stmt->bindParam(':language', $kl);
+        $stmt_language->execute();
+    }
 } catch (PDOException $e) {
     print ('Error : ' . $e->getMessage());
     exit();
 }
+
+
 
 $Languages = $_POST['lange'];
 foreach ($Languages as $lange) {
