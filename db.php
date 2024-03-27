@@ -28,7 +28,7 @@ try {
     $stmt->bindParam(':contract_agreed', $checkt);
 
     ;
-    $stmt_user->execute();
+    $stmt->execute();
     $user_id = $db->lastInsertId();
     $stmt = $db->prepare("INSERT INTO user_languages (user_id, language) VALUES (:user_id,:language)");
     $stmt->bindParam(':user_id', $user_id);
@@ -36,7 +36,7 @@ try {
     foreach ($languages as $language) {
         $kl = implode($Languages);
         $stmt->bindParam(':language', $kl);
-        $stmt_language->execute();
+        $stmt->execute();
     }
 } catch (PDOException $e) {
     print ('Error : ' . $e->getMessage());
