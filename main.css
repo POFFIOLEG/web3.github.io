@@ -86,6 +86,7 @@ div.wrap2.lh-lg.font-monospace {
     flex-wrap: wrap;
     align-content: flex-start;
     justify-content: center;
+    color: #fff;
     align-items: stretch;
 }
 
@@ -142,6 +143,7 @@ div.wrap2.lh-lg.font-monospace {
         align-content: flex-start;
         justify-content: center;
         align-items: stretch;
+        color: #fff;
     }
 
 
