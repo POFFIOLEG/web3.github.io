@@ -18,7 +18,6 @@ try {
     $someGroupName = $_POST['someGroupName'];
     $bio = $_POST['bio'];
     $checkt = $_POST['checkt'];
-
     $stmt->bindParam(':full_name', $login);
     $stmt->bindParam(':phone', $tel);
     $stmt->bindParam(':email', $email);
@@ -26,13 +25,11 @@ try {
     $stmt->bindParam(':gender', $someGroupName);
     $stmt->bindParam(':bio', $bio);
     $stmt->bindParam(':contract_agreed', $checkt);
-
-    ;
     $stmt->execute();
     $user_id = $db->lastInsertId();
     $stmt = $db->prepare("INSERT INTO user_languages (user_id, language) VALUES (:user_id,:language)");
     $stmt->bindParam(':user_id', $user_id);
-    $Languages = $_POST['lange']; // Предполагая, что данные о языках передаются в виде массива
+    $Languages = $_POST['lange'];
     foreach ($Languages as $language) {
         $kl = implode($Languages);
         $stmt->bindParam(':language', $kl);
@@ -42,8 +39,6 @@ try {
     print ('Error : ' . $e->getMessage());
     exit();
 }
-
-
 
 $Languages = $_POST['lange'];
 foreach ($Languages as $lange) {
