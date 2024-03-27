@@ -8,15 +8,22 @@ $db = new PDO(
     [PDO::ATTR_PERSISTENT => true, PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]
 );
 
-$user_id = $conn->insert_user_id; // Получаем ID последней добавленной записи в таблицу users
+// Получаем ID последней добавленной записи в таблицу users
 try {
     $stmt = $db->prepare("INSERT INTO user_languages (user_id, language) VALUES (:user_id,:language)");
     $user_id = $conn->insert_user_id;
-    $lange = $_POST['lange'];
+    // $lange = $_POST['lange'];
 
-    $kl = implode($Languages);
-    $stmt->bindParam(':user_id', $user_id);
-    $stmt->bindParam(':language', $kl);
+    // $kl = implode($Languages);
+    // $stmt->bindParam(':user_id', $user_id);
+    // $stmt->bindParam(':language', $kl);
+    $languages = $_POST['languages']; // Предполагая, что данные о языках передаются в виде массива
+
+    foreach ($languages as $language) {
+        $stmt->bindParam(':user_id', $user_id);
+        $stmt->bindParam(':language', $language);
+        $stmt->execute();
+    }
     $stmt->execute();
 
 } catch (PDOException $e) {
