@@ -11,16 +11,13 @@ $db = new PDO(
 try {
     $stmt = $db->prepare("INSERT INTO user_languages (user_id, language) VALUES (:user_id,:language)");
     $user_id = $db->lastInsertId();
-    $lange = $_POST['lange'];
-    $kl = implode($Lange);
     $stmt->bindParam(':user_id', $user_id);
-    $stmt->bindParam(':language', $kl);
-    // foreach ($languages as $language) {
-    //     $stmt->bindParam(':user_id', $user_id);
-    //     $kl = implode($Languages);
-    //     $stmt->bindParam(':language', $kl);
-    //     $stmt->execute();
-    // }
+    foreach ($languages as $language) {
+
+        $kl = implode($Languages);
+        $stmt->bindParam(':language', $kl);
+        $stmt->execute();
+    }
     $stmt->execute();
 
 } catch (PDOException $e) {
