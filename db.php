@@ -45,10 +45,10 @@ try {
 
 
 
-$Languages = $_POST['lange'];
-foreach ($Languages as $lange) {
-    $stmt = $db->prepare("INSERT INTO programming_languages (lang_id, lang_name) VALUES (:lang_id, :lang_name)");
-    $stmt->bindParam(':lang_name', $kl);
-}
+// $Languages = $_POST['lange'];
+// foreach ($Languages as $lange) {
+//     $stmt = $db->prepare("INSERT INTO programming_languages (lang_id, lang_name) VALUES (:lang_id, :lang_name)");
+//     $stmt->bindParam(':lang_name', $kl);
+// }
 
 ?>
