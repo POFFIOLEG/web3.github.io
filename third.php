@@ -11,7 +11,7 @@ $db = new PDO(
 // Получаем ID последней добавленной записи в таблицу users
 try {
     $stmt = $db->prepare("INSERT INTO user_languages (user_id, language) VALUES (:user_id,:language)");
-    $user_id = $conn->insert_user_id;
+    $user_id = $db->lastInsertId();
     // $lange = $_POST['lange'];
 
     // $kl = implode($Languages);
