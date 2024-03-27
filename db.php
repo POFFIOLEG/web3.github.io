@@ -33,7 +33,7 @@ try {
     $stmt = $db->prepare("INSERT INTO user_languages (user_id, language) VALUES (:user_id,:language)");
     $stmt->bindParam(':user_id', $user_id);
     $Languages = $_POST['lange']; // Предполагая, что данные о языках передаются в виде массива
-    foreach ($languages as $language) {
+    foreach ($Languages as $language) {
         $kl = implode($Languages);
         $stmt->bindParam(':language', $kl);
         $stmt->execute();
