@@ -160,7 +160,7 @@
                 </div>
             </form>
         </div>
-        <div class="wrap lh-lg font-monospace">
+        <div class="wrap2 lh-lg font-monospace">
             <div class="box">
                 <ul class="list-unstyled-sm">
                     <h5 id="links" class="text-center">Пункты выполненых скриншотов задания-3</h5>

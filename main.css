@@ -74,7 +74,7 @@ img {
     height: 94%;
 }
 
-div.wrap.lh-lg.font-monospace {
+div.wrap2.lh-lg.font-monospace {
     position: absolute;
     padding: 0px;
     margin: 10px 610px;
@@ -129,7 +129,7 @@ div.wrap.lh-lg.font-monospace {
         height: 94%;
     }
 
-    div.wrap.lh-lg.font-monospace {
+    div.wrap2.lh-lg.font-monospace {
         position: absolute;
         padding: 0px;
         margin: 10px 610px;
