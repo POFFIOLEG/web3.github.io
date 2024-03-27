@@ -79,8 +79,8 @@ div.wrap2.lh-lg.font-monospace {
     padding: 0px;
     margin: 10px 610px;
     border-radius: 10px;
-    box-shadow: 0px 0px 100px rgb(106, 10, 109);
-    background-color: #0000003f;
+    box-shadow: 0px 0px 100px rgb(30, 2, 66);
+    background-color: hsla(0, 0%, 0%, 0.192);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -114,13 +114,13 @@ div.wrap2.lh-lg.font-monospace {
 
     h5 {
         text-align: center;
-        color: aliceblue;
+        color: rgb(255, 255, 255);
     }
 
     a {
         position: absolute;
         text-align: center;
-        color: aliceblue;
+        color: rgb(255, 255, 255);
         font-weight: 900;
     }
 
@@ -134,8 +134,8 @@ div.wrap2.lh-lg.font-monospace {
         padding: 0px;
         margin: 10px 610px;
         border-radius: 10px;
-        box-shadow: 0px 0px 100px rgb(106, 10, 109);
-        background-color: #0000003f;
+        box-shadow: 0px 0px 100px rgb(30, 2, 66);
+        background-color: hsla(0, 0%, 0%, 0.192);
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
