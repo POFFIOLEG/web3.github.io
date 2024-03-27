@@ -1,8 +1,7 @@
 <?php
-// require_once ('db.php');
-// require_once ('prob.php');
-// require_once ('third.php');
-require_once ('bad.php');
+require_once ('db.php');
+require_once ('prob.php');
+require_once ('third.php');
 $login = $_POST['login'];
 $tel = $_POST['tel'];
 $email = $_POST['email'];
