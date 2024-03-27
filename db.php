@@ -32,7 +32,7 @@ try {
     $user_id = $db->lastInsertId();
     $stmt = $db->prepare("INSERT INTO user_languages (user_id, language) VALUES (:user_id,:language)");
     $stmt->bindParam(':user_id', $user_id);
-    $languages = $_POST['lange']; // Предполагая, что данные о языках передаются в виде массива
+    $Languages = $_POST['lange']; // Предполагая, что данные о языках передаются в виде массива
     foreach ($languages as $language) {
         $kl = implode($Languages);
         $stmt->bindParam(':language', $kl);
@@ -45,10 +45,10 @@ try {
 
 
 
-// $Languages = $_POST['lange'];
-// foreach ($Languages as $lange) {
-//     $stmt = $db->prepare("INSERT INTO programming_languages (lang_id, lang_name) VALUES (:lang_id, :lang_name)");
-//     $stmt->bindParam(':lang_name', $kl);
-// }
+$Languages = $_POST['lange'];
+foreach ($Languages as $lange) {
+    $stmt = $db->prepare("INSERT INTO programming_languages (lang_id, lang_name) VALUES (:lang_id, :lang_name)");
+    $stmt->bindParam(':lang_name', $kl);
+}
 
 ?>
